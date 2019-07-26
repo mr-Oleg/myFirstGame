@@ -1,0 +1,73 @@
+<!doctype html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8" />
+    <title>menu</title>
+    <style>
+    #choose_levels{
+			position:absolute;
+			top:0px;
+			left:0px;
+		}
+		#but1{
+			width:160px;
+			height:160px;
+			background-image:  url(assets/settings/easy.png);
+			position:absolute; 
+			top: 210px; 
+			left:52px;
+			border: 1px solid #29abe2;
+			border-radius: 100px;
+		}
+		#but1:hover {
+			box-shadow: inset 0 0 0 12px #29abe2;
+		}
+		#but2{
+			width:160px;
+			height:160px;
+			background-image: url(assets/settings/medium.png);
+			position:absolute; 
+			top: 210px; 
+			left:220px;
+			border: 1px solid #29abe2;
+			border-radius: 100px;
+		}
+		#but2:hover {
+			box-shadow: inset 0 0 0 6px #29abe2;
+		}
+		#but3{
+			width:160px;
+			height:160px;
+			background-image: url(assets/settings/hard.png);
+			position:absolute; 
+			top: 213px; 
+			left:390px;
+			border: 1px solid #29abe2;
+			border-radius: 100px;
+		}
+		#but3:hover {
+			box-shadow: inset 0 0 0 12px #29abe2;
+		}		
+	</style>
+</head>
+<body>
+<div id="choose_levels">
+
+
+		<div style="width: 1000px; margin: -10px -10px;">
+			<img src="assets/settings/back_ground.png" width="100%" height="600px"/>
+		</div>
+
+		<div  id="but1" class="rotate-shadows" onclick="set_settings(10);"></div>
+		<div  id="but2" onclick="set_settings(5);"></div>
+		<div  id="but3" onclick="set_settings(3);"></div>
+</div>
+</body>
+<script type="text/javascript">
+	function set_settings(lvl){
+		localStorage["Difficulty_lvl"] = Number(lvl);
+		console.log((localStorage.getItem("Difficulty_lvl")));
+		location.href = 'index.html';
+	}
+</script>
+</html>

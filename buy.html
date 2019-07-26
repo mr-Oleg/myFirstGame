@@ -1,0 +1,635 @@
+<!doctype html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8" />
+
+    <style>
+    	.elem1{
+    		width:202px;
+			height:100px;
+			background-image: url(assets/buy/button.png);
+			position:absolute; 
+			background-repeat: no-repeat;
+			top: 393px; 
+			left:401px;
+    	}
+		.elem1:hover{
+			 -webkit-transform: scale(1.1);
+			-ms-transform: scale(1.1);
+			transform: scale(1.1);
+		}
+    	.elem2{
+    		width:450px;
+			height:10px;
+			background-image: url(assets/buy/table.png);
+			position:absolute; 
+			top: 370px; 
+			left:287px;
+    	}
+    	.price{
+    		width:460px;
+			height:230px;
+			background-image: url(assets/buy/price.png);
+			position:absolute; 
+			top: 150px; 
+			left:281px;
+    	}
+    	.elem3{
+    		width:32px;
+			height:32px;
+			background-image: url(assets/buy/back.png);
+			position:absolute; 
+			top: 45px; 
+			left:925px;
+    	}
+		.elem3:hover{
+			border: 4px solid white;
+			border-radius: 100px;
+		}
+    	.elem4{
+    		width:100px;
+			height:100px;
+			background-image: url(assets/buy/left_arrow.png);
+			background-repeat: no-repeat;
+			position:absolute; 
+			top: 385px; 
+			left:282px;
+    	}
+		@-webkit-keyframes elem4 {
+		  15% {
+			-webkit-transform: translateX(9px);
+			transform: translateX(9px);
+		  }
+		  30% {
+			-webkit-transform: translateX(-9px);
+			transform: translateX(-9px);
+		  }
+		  40% {
+			-webkit-transform: translateX(6px);
+			transform: translateX(6px);
+		  }
+		  50% {
+			-webkit-transform: translateX(-6px);
+			transform: translateX(-6px);
+		  }
+		  65% {
+			-webkit-transform: translateX(3px);
+			transform: translateX(3px);
+		  }
+		  100% {
+			-webkit-transform: translateX(0);
+			transform: translateX(0);
+		  }
+		}
+		@keyframes elem4 {
+		  15% {
+			-webkit-transform: translateX(9px);
+			transform: translateX(9px);
+		  }
+		  30% {
+			-webkit-transform: translateX(-9px);
+			transform: translateX(-9px);
+		  }
+		  40% {
+			-webkit-transform: translateX(6px);
+			transform: translateX(6px);
+		  }
+		  50% {
+			-webkit-transform: translateX(-6px);
+			transform: translateX(-6px);
+		  }
+		  65% {
+			-webkit-transform: translateX(3px);
+			transform: translateX(3px);
+		  }
+		  100% {
+			-webkit-transform: translateX(0);
+			transform: translateX(0);
+		  }
+		}
+		.elem4:hover{
+			 -webkit-animation: elem4 0.6s ease;
+			  animation: elem4 0.6s ease;
+			  -webkit-animation-iteration-count: 1;
+			  animation-iteration-count: 1;
+		}
+    	.elem5{
+    		width:100px;
+			height:100px;
+			background-image: url(assets/buy/right_arrow.png);
+			background-repeat: no-repeat;
+			position:absolute; 
+			top: 388px; 
+			left:635px;
+    	}
+		@-webkit-keyframes elem5 {
+		  15% {
+			-webkit-transform: translateX(9px);
+			transform: translateX(9px);
+		  }
+		  30% {
+			-webkit-transform: translateX(-9px);
+			transform: translateX(-9px);
+		  }
+		  40% {
+			-webkit-transform: translateX(6px);
+			transform: translateX(6px);
+		  }
+		  50% {
+			-webkit-transform: translateX(-6px);
+			transform: translateX(-6px);
+		  }
+		  65% {
+			-webkit-transform: translateX(3px);
+			transform: translateX(3px);
+		  }
+		  100% {
+			-webkit-transform: translateX(0);
+			transform: translateX(0);
+		  }
+		}
+		@keyframes elem5 {
+		  15% {
+			-webkit-transform: translateX(9px);
+			transform: translateX(9px);
+		  }
+		  30% {
+			-webkit-transform: translateX(-9px);
+			transform: translateX(-9px);
+		  }
+		  40% {
+			-webkit-transform: translateX(6px);
+			transform: translateX(6px);
+		  }
+		  50% {
+			-webkit-transform: translateX(-6px);
+			transform: translateX(-6px);
+		  }
+		  65% {
+			-webkit-transform: translateX(3px);
+			transform: translateX(3px);
+		  }
+		  100% {
+			-webkit-transform: translateX(0);
+			transform: translateX(0);
+		  }
+		}
+		.elem5:hover{
+			 -webkit-animation: elem5 0.6s ease;
+			  animation: elem5 0.6s ease;
+			  -webkit-animation-iteration-count: 1;
+			  animation-iteration-count: 1;
+		}
+    	#can{
+    		width:500px;
+			height:300px;
+			position:absolute; 
+			/*background-color: red;*/
+			top: 100px; 
+			left:385px;
+    	}
+    	#coin{
+			width:200px;
+			height:100px;
+			position:absolute; 
+			top: 0px; 
+			left:0px;
+		}
+		#Mymoney{
+			width:200px;
+			height:100px;
+			position:absolute; 
+			top: 15px; 
+			left:75px;
+			font-size:200%;
+			color: white;
+		}
+		#PriceNow{
+			width:240px;
+			height:30px;
+			position:absolute; 
+			top: 165px; 
+			left:390px;
+			font-size:200%;
+			color: white;
+			text-align: center;
+		}
+		.table{
+			width:400px;
+			height:400px;
+			position:absolute; 
+			background-image: url(assets/buy/tabl.png);
+			top: 105px; 
+			left:300px;
+		}
+		.back{
+			top: 175px; 
+			left:615px;
+			width:30px;
+			height:30px;
+			position:absolute;
+			background-image: url(assets/buy/back_2.png);
+		}
+		.shadow{
+			position:absolute;
+			width: 1000px;
+			height:600px;
+			background-color: black;
+			opacity: 0.9 ;
+			top: 0px; 
+			left:0px;
+		}
+		#Error{
+			display:none;
+		}
+	</style>
+</head>
+<body>
+	<div id="chose_skin">
+		<div style="width: 1000px; margin: -10px -10px;">
+			<img src="assets/buy/back_ground.png" width="100%" height="600px"/>
+		</div>
+		<div class="elem1" onclick="save();" id="button_buy">
+		</div>
+		<div class="elem2"></div>
+		<div class="price"></div>
+		<div id="PriceNow"></div>
+		<a href="index.html"><div class="elem3">
+		</div></a>
+		<div class="elem4" onclick="swap('anim',convas,0);">
+		</div>
+		<div class="elem5" onclick="swap('anim',convas,1);">
+		</div>
+		<canvas id="can"></canvas>
+	</div>
+
+	<canvas id="coin"></canvas>
+	
+	<div id="Mymoney"></div>
+	
+	<div id="Error">
+		<div class="shadow" onclick="close_error();">
+		</div>
+			<div class="table"></div>
+			<div class="back" onclick="close_error();"></div>
+	</div>
+</body>
+
+ <script type="text/javascript" src="lib/animate.js"></script>
+ <script type="text/javascript">
+ 	var money = localStorage.getItem("money"); 
+
+    if(money == null)
+        money = 0;
+ 	document.getElementById('Mymoney').innerHTML = money;
+
+ 	function close_error(){
+ 		document.getElementById('Error').style.display="none";
+	}
+ 	
+
+ 	
+ 	//localStorage.clear();
+
+ 	//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\/
+ 	//\\//\\//\\//\\//\\//\\Convas//\\//\\//\\//\\//\\//\\
+ 	var convas = document.getElementById('can').getContext('2d');
+ 	var convas_2 = document.getElementById('coin').getContext('2d');
+ 	//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\/
+
+
+
+ 	//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\
+ 	//\\//\\//\\//\\//\\\\Animations//\\//\\//\\//\\//\\
+ 	var coins = {
+
+		coin : {
+			convas: convas_2,
+			path: 'sprite/Coin/coin.png', 
+			width: 100, 
+			height: 100, 
+			count: 12, 
+			first_height: 0, 
+			size: 0.8,
+			anim_speed: 180,
+			anim_loop: true,
+			anim_x: 10,
+			anim_y: 10,
+			anim_cl_w: 100,
+			anim_cl_h: 100,
+		},
+	};
+
+	var player1 = {
+		anim : {
+			convas: convas,
+			path: 'sprite/Player1/player.png', 
+			width: 56, 
+			height: 54, 
+			count: 11, 
+			first_height: 0, 
+			size: 1,
+			anim_speed: 230,
+			anim_loop: true,
+			anim_x: 35,
+			anim_y: 83,
+			anim_cl_w: 500,
+			anim_cl_h: 500,
+		},
+
+		left_start : 0,
+		left_stop : 4,
+		default : 5,
+		right_start : 6,
+		right_stop : 10,
+		price : 0
+	};
+
+	var player2 = {
+
+		anim : {
+			convas: convas,
+			path: 'sprite/Player2/player.png', 
+			width: 32, 
+			height: 48, 
+			count: 9, 
+			first_height: 0, 
+			size: 1,
+			anim_speed: 250,
+			anim_loop: true,
+			anim_x: 50,
+			anim_y: 88,
+			anim_cl_w: 500,
+			anim_cl_h: 500,
+		},
+
+		left_start : 0,
+		left_stop : 3,
+		default : 4,
+		right_start : 5,
+		right_stop : 8,
+		price : 25
+	};
+
+	var player3 = {
+		anim : {
+			convas: convas,
+			path: 'sprite/Player3/player.png', 
+			width: 50, 
+			height: 50, 
+			count: 9, 
+			first_height: 0, 
+			size: 1,
+			anim_speed: 180,
+			anim_loop: true,
+			anim_x: 50,
+			anim_y: 88,
+			anim_cl_w: 500,
+			anim_cl_h: 500,
+		},
+
+		left_start : 0,
+		left_stop : 3,
+		default : 4,
+		right_start : 5,
+		right_stop : 8,
+		price : 50
+	};
+
+	var player4 = {
+		anim : {
+			convas: convas,
+			path: 'sprite/Player4/player.png', 
+			width: 36, 
+			height: 48, 
+			count: 10, 
+			first_height: 0, 
+			size: 1,
+			anim_speed: 150,
+			anim_loop: true,
+			anim_x: 50,
+			anim_y: 88,
+			anim_cl_w: 500,
+			anim_cl_h: 500,
+		},
+
+		left_start : 0,
+		left_stop : 3,
+		default : 4,
+		right_start : 6,
+		right_stop : 9,
+		price : 100
+	};
+
+	var player5 = {
+		anim : {
+			convas: convas,
+			path: 'sprite/Player5/player.png', 
+			width: 33, 
+			height: 48, 
+			count: 11, 
+			first_height: 0, 
+			size: 1,
+			anim_speed: 150,
+			anim_loop: true,
+			anim_x: 50,
+			anim_y: 90,
+			anim_cl_w: 500,
+			anim_cl_h: 500,
+		},
+
+		left_start : 0,
+		left_stop : 4,
+		default : 5,
+		right_start : 6,
+		right_stop : 10,
+		price : 110
+	};
+
+
+	var player6 = {
+		anim : {
+			convas: convas,
+			path: 'sprite/Player6/player.png', 
+			width: 72, 
+			height: 58, 
+			count: 11, 
+			first_height: 0, 
+			size: 1,
+			anim_speed: 180,
+			anim_loop: true,
+			anim_x: 35,
+			anim_y: 79,
+			anim_cl_w: 500,
+			anim_cl_h: 500,
+		},
+
+		left_start : 0,
+		left_stop : 4,
+		default : 5,
+		right_start : 6,
+		right_stop : 10,
+		price : 300
+	};
+
+	//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\
+	//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\
+
+
+	//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\
+	//\\//\\//\\//\\Animation list\\//\\//\\//\\//\\//\\
+	var animations_player = {
+		animations : [player1,player2,player3,player4,player5,player6],
+	};
+	//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\
+	//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\
+
+
+	//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\
+	//\\//\\//\\//\\Animation now\\//\\//\\//\\//\\//\\
+	var animations_now = (localStorage.getItem("Now"));
+	//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\
+	//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\
+
+	//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\
+	//\\//\\//\\//\\Inventar//\\//\\//\\//\\
+	var inventar = {
+		inv : [0]
+	};
+	//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\
+	//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\
+
+	if(animations_player == null){
+
+		animations_player.now = 1;
+
+		localStorage["Now"] = 1; 
+
+	}else{
+
+		animations_player.now = Number(animations_now);
+
+	}
+
+	
+
+	if(JSON.parse(localStorage.getItem("inventar")) != null){
+
+		inventar = JSON.parse(localStorage.getItem("inventar"));
+	}
+	var buy = 0;
+	function test_buy(){
+		for(var i = 0; i < inventar.inv.length; i++){
+
+			if(inventar.inv[i] == animations_player.now){
+				document.getElementById('button_buy').style.backgroundImage = "url('assets/buy/button.png')";
+				buy = 0;
+				break;
+			}else{
+				buy = 1;
+				document.getElementById('button_buy').style.backgroundImage = "url('assets/buy/buy.png')";
+			}
+		}
+	}
+
+	test_buy();
+
+	document.getElementById('PriceNow').innerHTML = "Price: " + animations_player.animations[Number(animations_now)].price;
+
+	recurs('anim',animations_player.animations[animations_player.now],convas);
+
+	function swap(name,convas,turn){
+
+		var animations_now = (localStorage.getItem("Now"));
+		console.log(animations_now);
+
+		if(animations_player == null){
+
+			animations_player.now = 1;
+
+			localStorage["Now"] = 1; 
+
+		}else{
+
+			animations_player.now = Number(animations_now);
+		}
+
+
+		clear_anim(name);
+
+		var anim_now = animations_player.now;
+
+		if(turn){
+			if(animations_player.now > (animations_player.animations.length - 2)){
+				anim_now = 0;
+			}else{
+				anim_now+=1;
+			}
+			
+		}else{
+			if(animations_player.now == 0){
+				anim_now = animations_player.animations.length - 1;
+			}else{
+				
+				anim_now-=1;
+			}
+		}
+		animations_player.now = anim_now;
+
+		document.getElementById('PriceNow').innerHTML = "Price: " + animations_player.animations[animations_player.now].price;
+
+		localStorage["Now"] = animations_player.now;
+		
+		anim_now = animations_player.animations[anim_now];
+
+		clear_anim(name);
+		recurs(name,anim_now,convas);
+		test_buy();
+	}
+
+	function save(){
+		test_buy();
+		if(buy == 0){
+			var player_animate = {
+				path : animations_player.animations[animations_player.now].anim.path,
+				width : animations_player.animations[animations_player.now].anim.width,
+				height : animations_player.animations[animations_player.now].anim.height,
+
+				count : {
+
+					left_start : animations_player.animations[animations_player.now].left_start,
+					left_stop : animations_player.animations[animations_player.now].left_stop,
+
+					default : animations_player.animations[animations_player.now].default,
+
+					right_start : animations_player.animations[animations_player.now].right_start,
+					right_stop : animations_player.animations[animations_player.now].right_stop
+
+					
+				}
+			};
+
+			localStorage.setItem("player_animate", JSON.stringify(player_animate)); 
+		}else{
+			if(money >= animations_player.animations[animations_player.now].price){
+
+				money = money - animations_player.animations[animations_player.now].price;
+				localStorage.setItem("money", money);
+				inventar.inv.push(animations_player.now);
+				localStorage.setItem("inventar", JSON.stringify(inventar));
+				document.getElementById('button_buy').style.backgroundImage = "url('assets/buy/button.png')";
+				document.getElementById('Mymoney').innerHTML = money;
+			}else{
+			 	console.log('no money!');
+			 	document.getElementById('Error').style.display = 'block';
+			}
+
+		}
+	}
+
+	recurs('coin',coins,convas_2);
+
+
+
+</script>
+</html>
